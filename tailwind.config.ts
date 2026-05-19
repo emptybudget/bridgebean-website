@@ -33,8 +33,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        serif: ["var(--font-playfair)", "var(--font-noto-serif-kr)", "serif"],
-        sans: ["var(--font-noto-serif-kr)", "system-ui", "sans-serif"],
+        serif: ["'GangwonEducationModuche'", "system-ui", "sans-serif"],
+        sans: ["'GangwonEducationModuche'", "system-ui", "sans-serif"],
       },
       maxWidth: {
         content: "1180px",

@@ -36,7 +36,7 @@ export default function HomePage() {
             </h2>
           </div>
           <p className="body-base self-end">
-            대형 로스터리부터 홈로스터·커피 교육원까지, 정직한 산지 정보와 안정적인 컵 프로파일을
+            대형 로스터리부터 홈로스터·커피 교육원까지, 정직한 산지 정보와 일관된 품질의 생두를
             기반으로 오래 함께할 수 있는 파트너가 되고자 합니다.
           </p>
         </div>
