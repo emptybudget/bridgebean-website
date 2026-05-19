@@ -117,7 +117,12 @@
     "description": "192시간 동안 물속에서 혐기 발효(Ferveo)를 진행하여 깊은 생물학적 변화를 이끌어냈습니다. 유럽 시장에서 특히 사랑받는 부드럽고 균형 잡힌 바디감이 일품입니다.\n\n수량별 단가: 1kg 29,800원 · 5kg 29,300원 · 10kg 28,800원 (30kg 품절)\n배송: 약 7일 소요",
     "price_per_kg": 29800,
     "min_order_kg": 1,
-    "image": "/images/placeholder-coffee.svg",
+    "image": "/images/locrung-catimor-ferveo-natural-2.jpg",
+    "gallery": [
+      "/images/locrung-catimor-ferveo-natural-3.jpg",
+      "/images/locrung-catimor-ferveo-natural-4.jpg",
+      "/images/locrung-catimor-ferveo-natural-5.jpg"
+    ],
     "featured": false,
     "product_url": "https://smartstore.naver.com/bridgebean"
   },
