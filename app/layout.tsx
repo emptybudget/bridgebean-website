@@ -25,15 +25,17 @@ const caveat = Caveat({
   display: "swap",
 });
 
+const metaDescription = company.description.replace(/\s+/g, " ").trim();
+
 export const metadata: Metadata = {
   title: {
     default: `${company.name} · ${company.slogan}`,
     template: `%s · ${company.name}`,
   },
-  description: company.description,
+  description: metaDescription,
   openGraph: {
     title: `${company.name} · ${company.slogan}`,
-    description: company.description,
+    description: metaDescription,
     type: "website",
     locale: "ko_KR",
   },

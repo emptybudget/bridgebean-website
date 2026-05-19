@@ -13,9 +13,13 @@ export default function AboutPage() {
       <section className="container-content pt-16 md:pt-24 pb-12">
         <p className="label-eyebrow">About</p>
         <h1 className="heading-display mt-4 max-w-3xl">
-          산지와 카페를 잇는 다리,<br />브릿지빈입니다.
+          {company.slogan}
         </h1>
-        <p className="body-base mt-8 max-w-2xl">{company.description}</p>
+        <div className="body-base mt-8 max-w-2xl space-y-5">
+          {company.description.split("\n\n").map((para, i) => (
+            <p key={i}>{para}</p>
+          ))}
+        </div>
       </section>
 
       <section className="bg-cream-100/60 border-y border-cream-300/60">

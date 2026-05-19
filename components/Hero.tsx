@@ -48,12 +48,14 @@ export default function Hero() {
         </h1>
 
         {/* 4. Description */}
-        <p
-          className="body-base mt-7 max-w-2xl hero-reveal"
+        <div
+          className="body-base mt-7 max-w-2xl space-y-4 hero-reveal"
           style={{ animationDelay: "1.4s" }}
         >
-          {company.description}
-        </p>
+          {company.description.split("\n\n").map((para, i) => (
+            <p key={i}>{para}</p>
+          ))}
+        </div>
 
         {/* 5. CTAs */}
         <div
