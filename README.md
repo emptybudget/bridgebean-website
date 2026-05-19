@@ -111,6 +111,16 @@ GitHub 웹에서 파일 수정  →  "Commit changes" 클릭  →  1~2분 후 �
 
 > 💡 사진 용량 줄이기: 무료 사이트 [tinypng.com](https://tinypng.com) 에서 1MB 이하로 줄여서 올리시면 사이트가 빠릅니다.
 
+### 2-4-2. 로고 이미지로 교체할 때 (선택)
+
+현재 헤더·푸터의 로고는 명함의 손글씨 느낌을 SVG로 재현한 것입니다.
+실제 로고 이미지 파일(투명 배경 PNG 권장)이 있다면 아래 방법으로 교체할 수 있습니다.
+
+1. `public/images/` 에 로고 파일을 올립니다. 파일명 예: `logo.png` (가로세로 비율 1:1, 256×256px 이상, 투명 배경 권장)
+2. 개발자에게 "헤더 로고를 `/images/logo.png` 로 바꿔주세요" 라고 요청하시면 됩니다. (코드 한 줄만 바꾸면 됩니다)
+
+> 직접 코드를 바꿔보시려면: `components/Logo.tsx` 안의 SVG 전체를 지우고 `<img src="/images/logo.png" alt="Bridgebean" width="56" height="56" />` 한 줄로 교체.
+
 ### 2-5. 연락처(전화·이메일·인스타·운영시간)를 바꿀 때
 
 - 파일: `data/contact.json`

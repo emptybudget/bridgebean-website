@@ -2,14 +2,15 @@ import Link from "next/link";
 import { Instagram, Phone, Mail } from "lucide-react";
 import company from "@/data/company.json";
 import contact from "@/data/contact.json";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
     <footer className="mt-24 border-t border-cream-300/60 bg-cream-100">
       <div className="container-content py-14 grid gap-10 md:grid-cols-3">
         <div>
-          <div className="flex items-baseline gap-2">
-            <span className="font-serif text-2xl text-sage-700">{company.name}</span>
+          <div className="flex items-center gap-3">
+            <Logo size={56} />
             <span className="text-sm text-ink-muted">{company.name_kr}</span>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-ink-soft">

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Noto_Serif_KR } from "next/font/google";
+import { Playfair_Display, Noto_Serif_KR, Caveat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -15,6 +15,13 @@ const notoSerifKr = Noto_Serif_KR({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-noto-serif-kr",
+  display: "swap",
+});
+
+const caveat = Caveat({
+  weight: ["500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-caveat",
   display: "swap",
 });
 
@@ -38,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`${playfair.variable} ${notoSerifKr.variable}`}>
+    <html lang="ko" className={`${playfair.variable} ${notoSerifKr.variable} ${caveat.variable}`}>
       <body className="min-h-screen bg-cream-50 text-ink font-sans">
         <Header />
         <main>{children}</main>

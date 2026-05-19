@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import company from "@/data/company.json";
+import Logo from "./Logo";
 
 const nav = [
   { href: "/about", label: "회사 소개" },
@@ -20,12 +21,11 @@ export default function Header() {
       <div className="container-content flex h-16 md:h-20 items-center justify-between">
         <Link
           href="/"
-          className="flex items-baseline gap-2"
+          className="flex items-center gap-3"
           onClick={() => setOpen(false)}
+          aria-label={`${company.name} 홈으로`}
         >
-          <span className="font-serif text-xl md:text-2xl tracking-tight text-sage-600">
-            {company.name}
-          </span>
+          <Logo size={48} className="md:h-[56px] md:w-[56px]" />
           <span className="hidden sm:inline text-sm text-ink-muted">
             {company.name_kr}
           </span>
