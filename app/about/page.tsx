@@ -26,13 +26,18 @@ export default function AboutPage() {
         <div className="container-content py-16 md:py-24 grid gap-12 md:grid-cols-[1fr_2fr]">
           <div>
             <p className="label-eyebrow">Philosophy</p>
-            <h2 className="heading-section mt-3">로스터의 철학</h2>
+            <h2 className="heading-section mt-3">Bridgebean의 철학</h2>
           </div>
-          <div className="space-y-5">
-            {company.philosophy.split("\n\n").map((para, i) => (
-              <p key={i} className="body-base">{para}</p>
+          <ol className="space-y-5">
+            {company.philosophy.map((item, i) => (
+              <li key={i} className="flex gap-4">
+                <span className="font-serif text-sage-500 text-xl md:text-2xl shrink-0 leading-none pt-1">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p className="body-base">{item}</p>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 
@@ -53,14 +58,10 @@ export default function AboutPage() {
       </section>
 
       <section className="container-content pb-16">
-        <div className="card-surface p-8 md:p-10 grid md:grid-cols-3 gap-6">
+        <div className="card-surface p-8 md:p-10 grid md:grid-cols-2 gap-6">
           <div>
             <p className="label-eyebrow">Founded</p>
             <p className="mt-2 font-serif text-2xl text-ink">{company.founded_year}</p>
-          </div>
-          <div>
-            <p className="label-eyebrow">Representative</p>
-            <p className="mt-2 font-serif text-2xl text-ink">{company.representative}</p>
           </div>
           <div>
             <p className="label-eyebrow">Tagline</p>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Instagram, Phone, Mail, ShoppingBag } from "lucide-react";
+import { Instagram, Mail, ShoppingBag } from "lucide-react";
 import company from "@/data/company.json";
 import contact from "@/data/contact.json";
 import Logo from "./Logo";
@@ -16,9 +16,6 @@ export default function Footer() {
           <p className="mt-4 text-sm leading-relaxed text-ink-soft">
             {company.slogan}
           </p>
-          <p className="mt-2 text-xs text-ink-muted">
-            대표 · {company.representative}
-          </p>
         </div>
 
         <div>
@@ -34,18 +31,14 @@ export default function Footer() {
         <div>
           <h4 className="label-eyebrow mb-4">연락처</h4>
           <ul className="space-y-3 text-sm text-ink-soft">
-            <li className="flex items-center gap-2">
-              <Phone size={14} className="text-sage-600" />
-              <a href={`tel:${contact.phone.replace(/-/g, "")}`} className="hover:text-sage-700">
-                {contact.phone}
-              </a>
-            </li>
-            <li className="flex items-center gap-2">
-              <Mail size={14} className="text-sage-600" />
-              <a href={`mailto:${contact.email}`} className="hover:text-sage-700">
-                {contact.email}
-              </a>
-            </li>
+            {contact.email && (
+              <li className="flex items-center gap-2">
+                <Mail size={14} className="text-sage-600" />
+                <a href={`mailto:${contact.email}`} className="hover:text-sage-700">
+                  {contact.email}
+                </a>
+              </li>
+            )}
             {contact.instagram && (
               <li className="flex items-center gap-2">
                 <Instagram size={14} className="text-sage-600" />
@@ -72,9 +65,6 @@ export default function Footer() {
                 </a>
               </li>
             )}
-            <li className="pt-2 text-xs text-ink-muted">
-              {contact.business_hours}
-            </li>
           </ul>
         </div>
       </div>

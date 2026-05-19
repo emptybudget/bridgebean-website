@@ -42,7 +42,7 @@ export interface Company {
   founded_year: string;
   representative: string;
   strengths: Strength[];
-  philosophy: string;
+  philosophy: string[];
   values: Value[];
 }
 

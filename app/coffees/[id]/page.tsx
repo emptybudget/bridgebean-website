@@ -160,11 +160,7 @@ export default function CoffeeDetailPage({
               이 생두 문의하기
               <ArrowRight size={16} />
             </a>
-            <a href={`tel:${contact.phone.replace(/-/g, "")}`} className="btn-outline">
-              전화 문의
-            </a>
           </div>
-          <p className="mt-4 text-xs text-ink-muted">{contact.inquiry_lead_time}</p>
         </div>
       </section>
     </>
