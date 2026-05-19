@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import company from "@/data/company.json";
+import Logo from "./Logo";
 
 export default function Hero() {
   return (
@@ -18,25 +19,54 @@ export default function Hero() {
         className="absolute top-40 -left-32 -z-10 h-[320px] w-[320px] rounded-full bg-sage-200/40 blur-3xl"
       />
 
-      <div className="container-content pt-20 md:pt-28 pb-20 md:pb-32">
-        <div className="max-w-3xl">
-          <p className="label-eyebrow">{company.tagline_en}</p>
-          <h1 className="heading-display mt-5">
-            {company.slogan}
-          </h1>
-          <p className="body-base mt-7 max-w-2xl">
-            {company.description}
-          </p>
+      <div className="container-content pt-16 md:pt-24 pb-20 md:pb-28 flex flex-col items-center text-center">
+        {/* 1. Logo — first, big */}
+        <div
+          className="hero-logo-reveal"
+          style={{ animationDelay: "0.05s" }}
+        >
+          <Logo
+            size={240}
+            className="md:h-[300px] md:w-[300px] lg:h-[340px] lg:w-[340px]"
+          />
+        </div>
 
-          <div className="mt-10 flex flex-wrap gap-3">
-            <Link href="/coffees" className="btn-primary">
-              원두 라인업 보기
-              <ArrowRight size={16} />
-            </Link>
-            <Link href="/contact" className="btn-outline">
-              거래 문의하기
-            </Link>
-          </div>
+        {/* 2. English tagline */}
+        <p
+          className="label-eyebrow mt-6 hero-reveal"
+          style={{ animationDelay: "0.7s" }}
+        >
+          {company.tagline_en}
+        </p>
+
+        {/* 3. Slogan */}
+        <h1
+          className="heading-display mt-5 max-w-3xl hero-reveal"
+          style={{ animationDelay: "1.0s" }}
+        >
+          {company.slogan}
+        </h1>
+
+        {/* 4. Description */}
+        <p
+          className="body-base mt-7 max-w-2xl hero-reveal"
+          style={{ animationDelay: "1.4s" }}
+        >
+          {company.description}
+        </p>
+
+        {/* 5. CTAs */}
+        <div
+          className="mt-10 flex flex-wrap justify-center gap-3 hero-reveal"
+          style={{ animationDelay: "1.8s" }}
+        >
+          <Link href="/coffees" className="btn-primary">
+            원두 라인업 보기
+            <ArrowRight size={16} />
+          </Link>
+          <Link href="/contact" className="btn-outline">
+            거래 문의하기
+          </Link>
         </div>
       </div>
     </section>
