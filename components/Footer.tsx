@@ -23,7 +23,6 @@ export default function Footer() {
           <ul className="space-y-2 text-sm text-ink-soft">
             <li><Link href="/about" className="hover:text-sage-700">회사 소개</Link></li>
             <li><Link href="/coffees" className="hover:text-sage-700">생두 라인업</Link></li>
-            <li><Link href="/services" className="hover:text-sage-700">공급 서비스</Link></li>
             <li><Link href="/contact" className="hover:text-sage-700">거래 문의</Link></li>
           </ul>
         </div>

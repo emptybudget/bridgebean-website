@@ -46,32 +46,6 @@ export interface Company {
   values: Value[];
 }
 
-export interface ProcessStep {
-  step: number;
-  title: string;
-  desc: string;
-}
-
-export interface ServicePolicy {
-  title: string;
-  desc: string;
-  freshness_policy?: string;
-}
-
-export interface AdditionalService {
-  title: string;
-  desc: string;
-}
-
-export interface Services {
-  intro: string;
-  process: ProcessStep[];
-  delivery: ServicePolicy;
-  min_order: ServicePolicy;
-  pricing_note: ServicePolicy;
-  additional_services: AdditionalService[];
-}
-
 export interface Contact {
   phone: string;
   email: string;
