@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Bridgebean placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F3ECDC"/>
+      <stop offset="100%" stop-color="#E2EEE5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <g transform="translate(600 430)" fill="none" stroke="#86B79A" stroke-width="10" opacity="0.7">
+    <circle r="180"/>
+    <path d="M-110 -10 q 60 -90 110 0 q 60 90 110 0" stroke-linecap="round" fill="none"/>
+  </g>
+  <g font-family="Georgia, 'Playfair Display', serif" text-anchor="middle" fill="#558568">
+    <text x="600" y="700" font-size="42" letter-spacing="2">Bridgebean</text>
+    <text x="600" y="745" font-size="18" fill="#7A7A7A" letter-spacing="3">PLACEHOLDER · 사진을 업로드해 주세요</text>
+  </g>
+</svg>

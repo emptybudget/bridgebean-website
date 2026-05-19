@@ -1,0 +1,76 @@
+import Link from "next/link";
+import { Instagram, Phone, Mail } from "lucide-react";
+import company from "@/data/company.json";
+import contact from "@/data/contact.json";
+
+export default function Footer() {
+  return (
+    <footer className="mt-24 border-t border-cream-300/60 bg-cream-100">
+      <div className="container-content py-14 grid gap-10 md:grid-cols-3">
+        <div>
+          <div className="flex items-baseline gap-2">
+            <span className="font-serif text-2xl text-sage-700">{company.name}</span>
+            <span className="text-sm text-ink-muted">{company.name_kr}</span>
+          </div>
+          <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+            {company.slogan}
+          </p>
+          <p className="mt-2 text-xs text-ink-muted">
+            대표 · {company.representative}
+          </p>
+        </div>
+
+        <div>
+          <h4 className="label-eyebrow mb-4">사이트 메뉴</h4>
+          <ul className="space-y-2 text-sm text-ink-soft">
+            <li><Link href="/about" className="hover:text-sage-700">회사 소개</Link></li>
+            <li><Link href="/coffees" className="hover:text-sage-700">원두 라인업</Link></li>
+            <li><Link href="/services" className="hover:text-sage-700">공급 서비스</Link></li>
+            <li><Link href="/contact" className="hover:text-sage-700">거래 문의</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="label-eyebrow mb-4">연락처</h4>
+          <ul className="space-y-3 text-sm text-ink-soft">
+            <li className="flex items-center gap-2">
+              <Phone size={14} className="text-sage-600" />
+              <a href={`tel:${contact.phone.replace(/-/g, "")}`} className="hover:text-sage-700">
+                {contact.phone}
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Mail size={14} className="text-sage-600" />
+              <a href={`mailto:${contact.email}`} className="hover:text-sage-700">
+                {contact.email}
+              </a>
+            </li>
+            {contact.instagram && (
+              <li className="flex items-center gap-2">
+                <Instagram size={14} className="text-sage-600" />
+                <a
+                  href={contact.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-sage-700"
+                >
+                  {contact.instagram_handle || "Instagram"}
+                </a>
+              </li>
+            )}
+            <li className="pt-2 text-xs text-ink-muted">
+              {contact.business_hours}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-cream-300/60">
+        <div className="container-content py-5 text-xs text-ink-muted flex flex-col sm:flex-row justify-between gap-2">
+          <span>© {new Date().getFullYear()} {company.name}. All rights reserved.</span>
+          <span>{company.tagline_en}</span>
+        </div>
+      </div>
+    </footer>
+  );
+}

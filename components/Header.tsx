@@ -1,0 +1,76 @@
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import company from "@/data/company.json";
+
+const nav = [
+  { href: "/about", label: "회사 소개" },
+  { href: "/coffees", label: "원두" },
+  { href: "/services", label: "공급 서비스" },
+  { href: "/contact", label: "거래 문의" },
+];
+
+export default function Header() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className="sticky top-0 z-40 border-b border-cream-300/50 bg-cream-50/80 backdrop-blur">
+      <div className="container-content flex h-16 md:h-20 items-center justify-between">
+        <Link
+          href="/"
+          className="flex items-baseline gap-2"
+          onClick={() => setOpen(false)}
+        >
+          <span className="font-serif text-xl md:text-2xl tracking-tight text-sage-600">
+            {company.name}
+          </span>
+          <span className="hidden sm:inline text-sm text-ink-muted">
+            {company.name_kr}
+          </span>
+        </Link>
+
+        <nav className="hidden md:flex items-center gap-8">
+          {nav.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-sm text-ink-soft hover:text-sage-700 transition"
+            >
+              {item.label}
+            </Link>
+          ))}
+          <Link href="/contact" className="btn-primary !py-2 !px-5 text-sm">
+            문의하기
+          </Link>
+        </nav>
+
+        <button
+          aria-label="메뉴 열기"
+          className="md:hidden text-ink"
+          onClick={() => setOpen((v) => !v)}
+        >
+          {open ? <X size={22} /> : <Menu size={22} />}
+        </button>
+      </div>
+
+      {open && (
+        <div className="md:hidden border-t border-cream-300/60 bg-cream-50">
+          <nav className="container-content flex flex-col py-4 gap-1">
+            {nav.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="py-3 text-base text-ink-soft border-b border-cream-200 last:border-b-0"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      )}
+    </header>
+  );
+}

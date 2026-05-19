@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FDFBF6;
+  --foreground: #2A2A2A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .container-content {
+    @apply mx-auto w-full max-w-content px-6 md:px-10;
+  }
+
+  .heading-display {
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl tracking-tight text-ink leading-[1.15];
+  }
+
+  .heading-section {
+    @apply font-serif text-3xl md:text-4xl tracking-tight text-ink;
+  }
+
+  .heading-card {
+    @apply font-serif text-xl md:text-2xl text-ink;
+  }
+
+  .body-base {
+    @apply text-base md:text-[17px] text-ink-soft leading-[1.85];
+  }
+
+  .label-eyebrow {
+    @apply text-xs uppercase tracking-[0.22em] text-sage-600 font-medium;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-sage-600 px-6 py-3 text-sm md:text-base font-medium text-cream-50 transition hover:bg-sage-700;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-sage-600 px-6 py-3 text-sm md:text-base font-medium text-sage-700 transition hover:bg-sage-50;
+  }
+
+  .tag {
+    @apply inline-flex items-center rounded-full border border-sage-200 bg-sage-50 px-3 py-1 text-xs text-sage-700;
+  }
+
+  .card-surface {
+    @apply rounded-2xl border border-cream-300/60 bg-cream-50;
+  }
+}
