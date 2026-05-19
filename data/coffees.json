@@ -17,6 +17,12 @@
     "price_per_kg": 25900,
     "min_order_kg": 1,
     "image": "/images/locrung-catimor-fully-washed.jpg",
+    "gallery": [
+      "/images/locrung-catimor-fully-washed-2.jpg",
+      "/images/locrung-catimor-fully-washed-3.jpg",
+      "/images/locrung-catimor-fully-washed-4.jpg",
+      "/images/locrung-catimor-fully-washed-5.jpg"
+    ],
     "featured": true,
     "product_url": "https://smartstore.naver.com/bridgebean"
   },
