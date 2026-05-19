@@ -20,7 +20,7 @@ export default function CoffeesPage() {
         <p className="label-eyebrow">Green Coffee</p>
         <h1 className="heading-display mt-4">생두 라인업</h1>
         <p className="body-base mt-6 max-w-2xl">
-          현재 공급 가능한 생두입니다. 산지·가공·컵 프로파일 정보는 아래에서 확인하시고,
+          현재 공급 가능한 생두입니다. 산지·가공·컵 노트 정보는 아래에서 확인하시고,
           가격·재고·구매는 스마트스토어 상품 페이지를 이용해 주세요.
         </p>
 
