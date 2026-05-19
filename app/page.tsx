@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Leaf, Flame, Handshake, Sprout, Coffee as CoffeeIcon, Heart, type LucideIcon } from "lucide-react";
+import { ArrowRight, Leaf, Flame, Handshake, Sprout, Coffee as CoffeeIcon, Heart, Package, type LucideIcon } from "lucide-react";
 import Hero from "@/components/Hero";
 import CoffeeCard from "@/components/CoffeeCard";
 import ContactCTA from "@/components/ContactCTA";
@@ -16,6 +16,7 @@ const iconMap: Record<string, LucideIcon> = {
   Sprout,
   Coffee: CoffeeIcon,
   Heart,
+  Package,
 };
 
 export default function HomePage() {
@@ -31,12 +32,12 @@ export default function HomePage() {
           <div>
             <p className="label-eyebrow">Why {company.name}</p>
             <h2 className="heading-section mt-3">
-              매장이 다음 시즌에도<br />같은 잔을 낼 수 있도록.
+              산지의 시간을<br />매장 한 잔으로 잇습니다.
             </h2>
           </div>
           <p className="body-base self-end">
-            저희가 가장 신경 쓰는 일은 화려한 신규 라인업이 아니라, 매장에서 매일 같은 컵이
-            나올 수 있게 받쳐드리는 것입니다.
+            대형 로스터리부터 홈로스터·커피 교육원까지, 정직한 산지 정보와 안정적인 컵 프로파일을
+            기반으로 오래 함께할 수 있는 파트너가 되고자 합니다.
           </p>
         </div>
 
@@ -62,7 +63,7 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
             <div>
               <p className="label-eyebrow">Featured Beans</p>
-              <h2 className="heading-section mt-3">이번 시즌 추천 원두</h2>
+              <h2 className="heading-section mt-3">이번 시즌 추천 생두</h2>
             </div>
             <Link
               href="/coffees"

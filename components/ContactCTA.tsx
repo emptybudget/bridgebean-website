@@ -22,7 +22,7 @@ export default function ContactCTA({
             <ArrowRight size={16} />
           </Link>
           <Link href="/coffees" className="btn-outline">
-            원두 라인업 보기
+            생두 라인업 보기
           </Link>
         </div>
       </div>

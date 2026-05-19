@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  const mailtoSubject = encodeURIComponent("[원두 거래 문의]");
+  const mailtoSubject = encodeURIComponent("[생두 거래 문의]");
   const mailtoBody = encodeURIComponent(
-    "안녕하세요, 브릿지빈입니다.\n\n아래 정보 남겨주시면 빠르게 회신드리겠습니다.\n\n· 매장명 / 회사명:\n· 담당자명·연락처:\n· 위치(지역):\n· 운영 형태(카페·로스터리·디저트 공방·오피스 등):\n· 월 예상 사용량(kg):\n· 관심 원두 또는 컵 프로파일:\n\n[추가 문의]\n"
+    "안녕하세요, 브릿지빈입니다.\n\n아래 정보 남겨주시면 빠르게 회신드리겠습니다.\n\n· 매장명 / 회사명:\n· 담당자명·연락처:\n· 위치(지역):\n· 운영 형태(로스터리·카페·커피 교육원·홈로스터 등):\n· 월 예상 사용량(kg):\n· 관심 생두 또는 컵 프로파일:\n\n[추가 문의]\n"
   );
 
   return (

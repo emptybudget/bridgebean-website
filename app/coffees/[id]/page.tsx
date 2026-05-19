@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ShoppingBag } from "lucide-react";
 import coffeesData from "@/data/coffees.json";
 import contact from "@/data/contact.json";
 import type { Coffee } from "@/types";
@@ -27,8 +27,9 @@ export function generateMetadata({
 }
 
 const categoryLabel: Record<Coffee["category"], string> = {
-  "single-origin": "Single Origin",
-  blend: "Blend",
+  africa: "아프리카",
+  americas: "중남미",
+  asia: "아시아·태평양",
 };
 
 export default function CoffeeDetailPage({
@@ -41,16 +42,18 @@ export default function CoffeeDetailPage({
 
   const specs: { label: string; value?: string }[] = [
     { label: "산지", value: coffee.origin },
-    { label: "농장 / 스테이션", value: coffee.farm },
+    { label: "농장 / 협동조합", value: coffee.farm },
     { label: "고도", value: coffee.altitude },
     { label: "품종", value: coffee.variety },
+    { label: "등급", value: coffee.grade },
+    { label: "수확 연도", value: coffee.harvest_year },
     { label: "가공 방식", value: coffee.process },
-    { label: "로스팅", value: coffee.roast_level },
+    { label: "권장 로스팅", value: coffee.roast_level },
   ].filter((s) => s.value);
 
-  const mailtoSubject = encodeURIComponent(`[원두 문의] ${coffee.name}`);
+  const mailtoSubject = encodeURIComponent(`[생두 문의] ${coffee.name}`);
   const mailtoBody = encodeURIComponent(
-    `안녕하세요, 브릿지빈입니다.\n\n아래 원두에 대해 문의드립니다.\n\n· 원두명: ${coffee.name}\n· 희망 수량(kg):\n· 납품 희망일:\n· 매장명:\n· 연락처:\n\n[추가 문의사항]\n`
+    `안녕하세요, 브릿지빈입니다.\n\n아래 생두에 대해 문의드립니다.\n\n· 생두명: ${coffee.name}\n· 희망 수량(kg):\n· 입고 희망일:\n· 업체명/매장명:\n· 운영 형태(로스터리·카페·교육원·홈로스터 등):\n· 연락처:\n\n[추가 문의사항]\n`
   );
 
   return (
@@ -60,7 +63,7 @@ export default function CoffeeDetailPage({
           href="/coffees"
           className="inline-flex items-center gap-1.5 text-sm text-ink-muted hover:text-sage-700"
         >
-          <ArrowLeft size={14} /> 원두 라인업으로
+          <ArrowLeft size={14} /> 생두 라인업으로
         </Link>
       </section>
 
@@ -108,24 +111,6 @@ export default function CoffeeDetailPage({
             ))}
           </div>
 
-          {/* Brew & best for */}
-          {(coffee.recommended_brew || coffee.best_for) && (
-            <div className="mt-6 grid sm:grid-cols-2 gap-4">
-              {coffee.recommended_brew && (
-                <div className="card-surface p-5">
-                  <p className="label-eyebrow">추천 추출</p>
-                  <p className="mt-2 text-sm text-ink">{coffee.recommended_brew}</p>
-                </div>
-              )}
-              {coffee.best_for && (
-                <div className="card-surface p-5">
-                  <p className="label-eyebrow">잘 어울리는 메뉴</p>
-                  <p className="mt-2 text-sm text-ink">{coffee.best_for}</p>
-                </div>
-              )}
-            </div>
-          )}
-
           {/* Pricing */}
           <div className="mt-8 flex items-end justify-between border-t border-cream-300/60 pt-6">
             <div>
@@ -141,11 +126,22 @@ export default function CoffeeDetailPage({
           </div>
 
           <div className="mt-8 flex flex-wrap gap-3">
+            {coffee.product_url && (
+              <a
+                href={coffee.product_url}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-primary"
+              >
+                <ShoppingBag size={16} />
+                스마트스토어에서 구매
+              </a>
+            )}
             <a
               href={`mailto:${contact.email}?subject=${mailtoSubject}&body=${mailtoBody}`}
-              className="btn-primary"
+              className={coffee.product_url ? "btn-outline" : "btn-primary"}
             >
-              이 원두 문의하기
+              이 생두 문의하기
               <ArrowRight size={16} />
             </a>
             <a href={`tel:${contact.phone.replace(/-/g, "")}`} className="btn-outline">

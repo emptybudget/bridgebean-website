@@ -8,8 +8,9 @@ type Filter = "all" | CoffeeCategory;
 
 const tabs: { value: Filter; label: string }[] = [
   { value: "all", label: "전체" },
-  { value: "single-origin", label: "싱글 오리진" },
-  { value: "blend", label: "블렌드" },
+  { value: "africa", label: "아프리카" },
+  { value: "americas", label: "중남미" },
+  { value: "asia", label: "아시아·태평양" },
 ];
 
 export default function CoffeeGrid({ coffees }: { coffees: Coffee[] }) {

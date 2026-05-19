@@ -8,7 +8,7 @@ import Logo from "./Logo";
 
 const nav = [
   { href: "/about", label: "회사 소개" },
-  { href: "/coffees", label: "원두" },
+  { href: "/coffees", label: "생두" },
   { href: "/services", label: "공급 서비스" },
   { href: "/contact", label: "거래 문의" },
 ];

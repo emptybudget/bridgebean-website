@@ -63,7 +63,7 @@ export default function Hero() {
           style={{ animationDelay: "1.8s" }}
         >
           <Link href="/coffees" className="btn-primary">
-            원두 라인업 보기
+            생두 라인업 보기
             <ArrowRight size={16} />
           </Link>
           <Link href="/contact" className="btn-outline">

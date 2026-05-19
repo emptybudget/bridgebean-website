@@ -1,4 +1,4 @@
-export type CoffeeCategory = "single-origin" | "blend";
+export type CoffeeCategory = "africa" | "americas" | "asia";
 
 export interface Coffee {
   id: string;
@@ -10,15 +10,16 @@ export interface Coffee {
   altitude?: string;
   process: string;
   variety: string;
+  grade?: string;
+  harvest_year?: string;
   roast_level: string;
   notes: string[];
   description: string;
-  recommended_brew?: string;
-  best_for?: string;
   price_per_kg: number;
   min_order_kg: number;
   image: string;
   featured: boolean;
+  product_url?: string;
 }
 
 export interface Strength {

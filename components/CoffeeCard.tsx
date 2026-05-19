@@ -4,8 +4,9 @@ import { ArrowUpRight } from "lucide-react";
 import type { Coffee } from "@/types";
 
 const categoryLabel: Record<Coffee["category"], string> = {
-  "single-origin": "Single Origin",
-  blend: "Blend",
+  africa: "아프리카",
+  americas: "중남미",
+  asia: "아시아·태평양",
 };
 
 export default function CoffeeCard({ coffee }: { coffee: Coffee }) {
