@@ -71,7 +71,11 @@
     "description": "인위적 개입 없이 완숙 체리를 그대로 건조하여 자연의 리듬을 담았습니다. 과도한 발효향 대신 부드럽고 깨끗한 단맛과 편안한 여운을 선사합니다.\n\n수량별 단가: 1kg 28,400원 · 5kg 27,800원 · 10kg 27,400원 · 30kg 26,900원\n배송: 약 7일 소요",
     "price_per_kg": 28400,
     "min_order_kg": 1,
-    "image": "/images/placeholder-coffee.svg",
+    "image": "/images/locrung-catimor-natural.jpg",
+    "gallery": [
+      "/images/locrung-catimor-natural-2.jpg",
+      "/images/locrung-catimor-natural-3.jpg"
+    ],
     "featured": false,
     "product_url": "https://smartstore.naver.com/bridgebean"
   },
