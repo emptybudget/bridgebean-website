@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Leaf, Flame, Handshake, Sprout, Coffee as CoffeeIcon, Heart } from "lucide-react";
+import { ArrowRight, Leaf, Flame, Handshake, Sprout, Coffee as CoffeeIcon, Heart, type LucideIcon } from "lucide-react";
 import Hero from "@/components/Hero";
 import CoffeeCard from "@/components/CoffeeCard";
 import ContactCTA from "@/components/ContactCTA";
@@ -9,7 +9,7 @@ import type { Coffee } from "@/types";
 
 const coffees = coffeesData as Coffee[];
 
-const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+const iconMap: Record<string, LucideIcon> = {
   Leaf,
   Flame,
   Handshake,
