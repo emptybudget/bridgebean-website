@@ -18,6 +18,7 @@ export interface Coffee {
   price_per_kg?: number;
   min_order_kg?: number;
   image: string;
+  gallery?: string[];
   featured: boolean;
   product_url?: string;
 }

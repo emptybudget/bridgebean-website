@@ -121,6 +121,30 @@ GitHub 웹에서 파일 수정  →  "Commit changes" 클릭  →  1~2분 후 �
 
 > 💡 사진 용량 줄이기: 무료 사이트 [tinypng.com](https://tinypng.com) 에서 1MB 이하로 줄여서 올리시면 사이트가 빠릅니다.
 
+### 2-4-1. 한 상품에 사진 여러 장 넣기 (상세 페이지 슬라이드)
+
+상품 카드에 보이는 **메인 사진** 은 `image` 필드 하나로 정해지고,
+상세 페이지에는 **메인 + 추가 사진들** 이 옆으로 슥슥 넘기는 슬라이드로 보입니다.
+
+추가 사진은 `gallery` 항목에 넣어주세요 (없으면 슬라이드 없음, 메인 한 장만 보임).
+
+```json
+{
+  "id": "locrung-catimor-natural",
+  "name": "카티모르 내추럴",
+  "image": "/images/locrung-catimor-natural.jpg",
+  "gallery": [
+    "/images/locrung-catimor-natural-2.jpg",
+    "/images/locrung-catimor-natural-3.jpg"
+  ],
+  ...
+}
+```
+
+- 카드(목록)에는 **`image`** 만 표시
+- 상세 페이지에는 **`image` → gallery 순서대로** 모두 표시 (모바일은 좌우 스와이프, PC는 화살표)
+- 사진은 모두 `public/images/` 폴더에 미리 올려두셔야 합니다.
+
 ### 2-4-2. 로고 이미지로 교체할 때
 
 헤더·푸터·홈 메인의 로고는 **`public/images/logo.png`** 파일을 사용합니다.

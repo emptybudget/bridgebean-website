@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ShoppingBag } from "lucide-react";
 import coffeesData from "@/data/coffees.json";
 import contact from "@/data/contact.json";
 import type { Coffee } from "@/types";
+import ImageCarousel from "@/components/ImageCarousel";
 
 const coffees = coffeesData as Coffee[];
 
@@ -68,16 +68,12 @@ export default function CoffeeDetailPage({
       </section>
 
       <section className="container-content pt-6 md:pt-10 pb-16 md:pb-24 grid gap-10 lg:grid-cols-2">
-        <div className="relative aspect-square w-full overflow-hidden rounded-3xl bg-cream-200 border border-cream-300/60">
-          <Image
-            src={coffee.image}
+        <div className="relative">
+          <ImageCarousel
+            images={[coffee.image, ...(coffee.gallery ?? [])]}
             alt={coffee.name}
-            fill
-            sizes="(max-width: 1024px) 100vw, 560px"
-            className="object-cover"
-            priority
           />
-          <span className="absolute top-4 left-4 tag bg-cream-50/90 backdrop-blur">
+          <span className="absolute top-4 left-4 z-10 tag bg-cream-50/90 backdrop-blur">
             {categoryLabel[coffee.category]}
           </span>
         </div>
