@@ -21,8 +21,12 @@ export default function CoffeeGrid({ coffees }: { coffees: Coffee[] }) {
     return coffees.filter((c) => c.category === filter);
   }, [filter, coffees]);
 
+  const distinctCategories = new Set(coffees.map((c) => c.category));
+  const showFilter = distinctCategories.size > 1;
+
   return (
     <div>
+      {showFilter && (
       <div className="flex flex-wrap items-center gap-2 mb-8">
         {tabs.map((t) => {
           const active = filter === t.value;
@@ -45,6 +49,7 @@ export default function CoffeeGrid({ coffees }: { coffees: Coffee[] }) {
           총 {filtered.length}종
         </span>
       </div>
+      )}
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((coffee) => (

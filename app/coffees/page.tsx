@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import { ExternalLink } from "lucide-react";
 import CoffeeGrid from "@/components/CoffeeGrid";
 import ContactCTA from "@/components/ContactCTA";
 import coffeesData from "@/data/coffees.json";
+import contact from "@/data/contact.json";
 import type { Coffee } from "@/types";
 
 const coffees = coffeesData as Coffee[];
 
 export const metadata: Metadata = {
   title: "생두 라인업",
-  description: "브릿지빈에서 공급하는 싱글 오리진 생두 라인업입니다.",
+  description: "브릿지빈에서 공급하는 생두 라인업입니다.",
 };
 
 export default function CoffeesPage() {
@@ -18,9 +20,21 @@ export default function CoffeesPage() {
         <p className="label-eyebrow">Green Coffee</p>
         <h1 className="heading-display mt-4">생두 라인업</h1>
         <p className="body-base mt-6 max-w-2xl">
-          현재 공급 가능한 생두입니다. 각 항목을 눌러 산지·프로세스·수확연도·권장 로스팅 등
-          상세 정보를 확인하실 수 있습니다. 시즌 한정 마이크로 로트는 별도 표기됩니다.
+          현재 공급 가능한 생두입니다. 산지·가공·컵 프로파일 정보는 아래에서 확인하시고,
+          가격·재고·구매는 스마트스토어 상품 페이지를 이용해 주세요.
         </p>
+
+        {contact.smartstore_url && (
+          <a
+            href={contact.smartstore_url}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-7 inline-flex items-center gap-2 text-sm text-sage-700 hover:text-sage-800 font-medium"
+          >
+            스마트스토어 전체 상품 보기
+            <ExternalLink size={14} />
+          </a>
+        )}
       </section>
 
       <section className="container-content pb-16 md:pb-24">
@@ -28,8 +42,8 @@ export default function CoffeesPage() {
       </section>
 
       <ContactCTA
-        title="원하시는 컵 프로파일이 있나요?"
-        desc="로스팅 방향이나 메뉴 스타일을 알려주시면, 가장 잘 맞는 생두 2~3종을 샘플로 보내드립니다."
+        title="대량 거래·납품 문의는 따로 받습니다"
+        desc="정기 거래나 일반 상품에 없는 수량·포장이 필요하시면 전화 또는 이메일로 직접 문의 주세요."
       />
     </>
   );

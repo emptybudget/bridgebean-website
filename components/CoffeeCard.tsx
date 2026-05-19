@@ -46,19 +46,29 @@ export default function CoffeeCard({ coffee }: { coffee: Coffee }) {
 
         <p className="mt-4 text-sm text-ink-soft">{coffee.origin}</p>
 
-        <div className="mt-4 flex flex-wrap gap-1.5">
-          {coffee.notes.slice(0, 4).map((note) => (
-            <span key={note} className="tag">
-              {note}
-            </span>
-          ))}
-        </div>
+        {coffee.notes.length > 0 && (
+          <div className="mt-4 flex flex-wrap gap-1.5">
+            {coffee.notes.slice(0, 4).map((note) => (
+              <span key={note} className="tag">
+                {note}
+              </span>
+            ))}
+          </div>
+        )}
 
         <div className="mt-5 flex items-center justify-between border-t border-cream-200 pt-4 text-sm">
-          <span className="text-ink-muted">{coffee.roast_level} · {coffee.process}</span>
+          <span className="text-ink-muted">
+            {[coffee.roast_level, coffee.process].filter(Boolean).join(" · ") || coffee.origin}
+          </span>
           <span className="font-medium text-ink">
-            ₩{coffee.price_per_kg.toLocaleString()}
-            <span className="text-xs text-ink-muted"> /kg</span>
+            {coffee.price_per_kg && coffee.price_per_kg > 0 ? (
+              <>
+                ₩{coffee.price_per_kg.toLocaleString()}
+                <span className="text-xs text-ink-muted"> /kg</span>
+              </>
+            ) : (
+              <span className="text-xs text-sage-700">스마트스토어 참고</span>
+            )}
           </span>
         </div>
       </div>

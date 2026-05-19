@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Phone, Mail, Instagram, MessageCircle, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, Instagram, MessageCircle, MapPin, Clock, ShoppingBag } from "lucide-react";
 import contact from "@/data/contact.json";
 import company from "@/data/company.json";
 
@@ -40,6 +40,16 @@ export default function ContactPage() {
           href={`mailto:${contact.email}?subject=${mailtoSubject}&body=${mailtoBody}`}
           note="가장 빠르게 회신드리는 채널입니다"
         />
+        {contact.smartstore_url ? (
+          <ChannelCard
+            icon={<ShoppingBag size={18} />}
+            label="스마트스토어"
+            value="상품 보기·구매"
+            href={contact.smartstore_url}
+            external
+            note="개별 상품 구매는 스마트스토어에서"
+          />
+        ) : null}
         {contact.instagram ? (
           <ChannelCard
             icon={<Instagram size={18} />}

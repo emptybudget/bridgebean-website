@@ -93,13 +93,19 @@ export default function CoffeeDetailPage({
             </p>
           )}
 
-          <div className="mt-6 flex flex-wrap gap-1.5">
-            {coffee.notes.map((n) => (
-              <span key={n} className="tag">{n}</span>
+          {coffee.notes.length > 0 && (
+            <div className="mt-6 flex flex-wrap gap-1.5">
+              {coffee.notes.map((n) => (
+                <span key={n} className="tag">{n}</span>
+              ))}
+            </div>
+          )}
+
+          <div className="body-base mt-7 space-y-4">
+            {coffee.description.split("\n\n").map((para, i) => (
+              <p key={i}>{para}</p>
             ))}
           </div>
-
-          <p className="body-base mt-7">{coffee.description}</p>
 
           {/* Specs */}
           <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-5 rounded-2xl border border-cream-300/60 bg-cream-50 p-6">
@@ -112,18 +118,28 @@ export default function CoffeeDetailPage({
           </div>
 
           {/* Pricing */}
-          <div className="mt-8 flex items-end justify-between border-t border-cream-300/60 pt-6">
-            <div>
-              <p className="text-xs text-ink-muted">도매가 (1kg 기준)</p>
-              <p className="font-serif text-3xl text-ink mt-1">
-                ₩{coffee.price_per_kg.toLocaleString()}
-              </p>
+          {(coffee.price_per_kg || coffee.min_order_kg) ? (
+            <div className="mt-8 flex items-end justify-between border-t border-cream-300/60 pt-6">
+              {coffee.price_per_kg ? (
+                <div>
+                  <p className="text-xs text-ink-muted">도매가 (1kg 기준)</p>
+                  <p className="font-serif text-3xl text-ink mt-1">
+                    ₩{coffee.price_per_kg.toLocaleString()}
+                  </p>
+                </div>
+              ) : <div />}
+              {coffee.min_order_kg ? (
+                <div className="text-right">
+                  <p className="text-xs text-ink-muted">최소 주문량</p>
+                  <p className="font-serif text-3xl text-ink mt-1">{coffee.min_order_kg}kg</p>
+                </div>
+              ) : null}
             </div>
-            <div className="text-right">
-              <p className="text-xs text-ink-muted">최소 주문량</p>
-              <p className="font-serif text-3xl text-ink mt-1">{coffee.min_order_kg}kg</p>
+          ) : (
+            <div className="mt-8 rounded-2xl bg-sage-50 border border-sage-200 p-5 text-sm text-sage-800">
+              가격·재고는 스마트스토어 상품 페이지에서 확인해 주세요.
             </div>
-          </div>
+          )}
 
           <div className="mt-8 flex flex-wrap gap-3">
             {coffee.product_url && (

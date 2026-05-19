@@ -15,8 +15,8 @@ export interface Coffee {
   roast_level: string;
   notes: string[];
   description: string;
-  price_per_kg: number;
-  min_order_kg: number;
+  price_per_kg?: number;
+  min_order_kg?: number;
   image: string;
   featured: boolean;
   product_url?: string;
@@ -78,6 +78,7 @@ export interface Contact {
   kakao_channel: string;
   instagram: string;
   instagram_handle: string;
+  smartstore_url?: string;
   address: string;
   business_hours: string;
   inquiry_lead_time: string;

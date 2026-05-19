@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ShoppingBag } from "lucide-react";
 import company from "@/data/company.json";
+import contact from "@/data/contact.json";
 import Logo from "./Logo";
 
 const nav = [
@@ -41,9 +42,17 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
-          <Link href="/contact" className="btn-primary !py-2 !px-5 text-sm">
-            문의하기
-          </Link>
+          {contact.smartstore_url && (
+            <a
+              href={contact.smartstore_url}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-primary !py-2 !px-5 text-sm"
+            >
+              <ShoppingBag size={14} />
+              스마트스토어
+            </a>
+          )}
         </nav>
 
         <button
@@ -68,6 +77,18 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+            {contact.smartstore_url && (
+              <a
+                href={contact.smartstore_url}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setOpen(false)}
+                className="py-3 text-base text-sage-700 font-medium inline-flex items-center gap-2"
+              >
+                <ShoppingBag size={16} />
+                스마트스토어에서 구매
+              </a>
+            )}
           </nav>
         </div>
       )}

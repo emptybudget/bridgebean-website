@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Instagram, Phone, Mail } from "lucide-react";
+import { Instagram, Phone, Mail, ShoppingBag } from "lucide-react";
 import company from "@/data/company.json";
 import contact from "@/data/contact.json";
 import Logo from "./Logo";
@@ -56,6 +56,19 @@ export default function Footer() {
                   className="hover:text-sage-700"
                 >
                   {contact.instagram_handle || "Instagram"}
+                </a>
+              </li>
+            )}
+            {contact.smartstore_url && (
+              <li className="flex items-center gap-2">
+                <ShoppingBag size={14} className="text-sage-600" />
+                <a
+                  href={contact.smartstore_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-sage-700"
+                >
+                  스마트스토어
                 </a>
               </li>
             )}
