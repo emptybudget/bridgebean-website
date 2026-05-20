@@ -12,7 +12,7 @@ export default function AboutPage() {
     <>
       <section className="container-content pt-16 md:pt-24 pb-12">
         <p className="label-eyebrow">About</p>
-        <h1 className="heading-display mt-4 max-w-3xl">
+        <h1 className="heading-display mt-4 max-w-3xl whitespace-pre-line">
           {company.slogan}
         </h1>
         <div className="body-base mt-8 max-w-2xl space-y-5">

@@ -41,7 +41,7 @@ export default function Hero() {
 
         {/* 3. Slogan */}
         <h1
-          className="heading-display mt-5 max-w-3xl hero-reveal"
+          className="heading-display mt-5 max-w-3xl whitespace-pre-line hero-reveal"
           style={{ animationDelay: "1.0s" }}
         >
           {company.slogan}
