@@ -305,7 +305,7 @@
     ],
     "delivery_note": "약 7일 소요",
     "image": "/images/locrung-catimor-fruit-cofermentation.jpg",
-    "featured": true,
+    "featured": false,
     "product_url": "https://smartstore.naver.com/bridgebean"
   },
   {
@@ -334,7 +334,7 @@
       "/images/locrung-liberica-excelsa-cm-natural-3.jpg",
       "/images/locrung-liberica-excelsa-cm-natural-4.jpg"
     ],
-    "featured": false,
+    "featured": true,
     "product_url": "https://smartstore.naver.com/bridgebean"
   }
 ]
