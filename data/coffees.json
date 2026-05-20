@@ -96,7 +96,13 @@
     "description": "240시간의 저온 혐기성 발효를 통해 단맛과 부드러운 질감을 극대화했습니다. 깨끗하고 선명한 향이 특징인 LOCRUNG의 야심작입니다.\n\n수량별 단가: 1kg 30,300원 · 5kg 29,800원 · 10kg 29,300원 · 30kg 28,800원\n배송: 약 7일 소요",
     "price_per_kg": 30300,
     "min_order_kg": 1,
-    "image": "/images/placeholder-coffee.svg",
+    "image": "/images/locrung-catimor-cm-natural.jpg",
+    "gallery": [
+      "/images/locrung-catimor-cm-natural-2.jpg",
+      "/images/locrung-catimor-cm-natural-3.jpg",
+      "/images/locrung-catimor-cm-natural-4.jpg",
+      "/images/locrung-catimor-cm-natural-5.jpg"
+    ],
     "featured": true,
     "product_url": "https://smartstore.naver.com/bridgebean"
   },
@@ -144,7 +150,7 @@
     "description": "디펄핑 후 1단계 혐기 발효를 거쳐, 실제 과일과 효모를 추가해 72시간 더 발효한 실험적인 커피입니다. 강렬하고 선명한 과일 향을 경험할 수 있습니다.\n\n공급 종류: 메론(재고 있음) · 딸기 · 포도 · 망고 · 복숭아 · 리치\n수량별 단가: 1kg 44,900원 · 2kg 44,400원 · 5kg 43,900원\n배송: 약 7일 소요",
     "price_per_kg": 44900,
     "min_order_kg": 1,
-    "image": "/images/placeholder-coffee.svg",
+    "image": "/images/locrung-catimor-fruit-cofermentation.jpg",
     "featured": true,
     "product_url": "https://smartstore.naver.com/bridgebean"
   },
