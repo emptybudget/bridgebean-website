@@ -23,20 +23,11 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ko_KR",
     siteName: company.name,
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: `${company.name} — ${cleanSlogan}`,
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${company.name} · ${cleanSlogan}`,
     description: metaDescription,
-    images: ["/og-image.jpg"],
   },
 };
 
