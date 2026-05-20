@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Instagram, MessageCircle, ShoppingBag } from "lucide-react";
+import { Mail, Instagram, ShoppingBag } from "lucide-react";
 import contact from "@/data/contact.json";
 import company from "@/data/company.json";
 
@@ -53,16 +53,6 @@ export default function ContactPage() {
             href={contact.instagram}
             external
             note="신규 라인업·시즌 공지 확인"
-          />
-        )}
-        {contact.kakao_channel && (
-          <ChannelCard
-            icon={<MessageCircle size={18} />}
-            label="카카오톡 채널"
-            value="브릿지빈 채널 바로가기"
-            href={contact.kakao_channel}
-            external
-            note="간편한 메시지 문의"
           />
         )}
       </section>

@@ -1,4 +1,10 @@
-export type CoffeeCategory = "africa" | "americas" | "asia";
+export type CoffeeCategory = "washed" | "natural" | "experimental" | "rare";
+
+export interface PriceTier {
+  kg: number;
+  price?: number;
+  sold_out?: boolean;
+}
 
 export interface Coffee {
   id: string;
@@ -14,9 +20,12 @@ export interface Coffee {
   harvest_year?: string;
   roast_level: string;
   notes: string[];
+  notes_source?: string;
   description: string;
   price_per_kg?: number;
   min_order_kg?: number;
+  price_tiers?: PriceTier[];
+  delivery_note?: string;
   image: string;
   gallery?: string[];
   featured: boolean;
@@ -25,11 +34,6 @@ export interface Coffee {
 
 export interface Strength {
   icon: string;
-  title: string;
-  desc: string;
-}
-
-export interface Value {
   title: string;
   desc: string;
 }
@@ -44,17 +48,12 @@ export interface Company {
   representative: string;
   strengths: Strength[];
   philosophy: string[];
-  values: Value[];
 }
 
 export interface Contact {
-  phone: string;
   email: string;
-  kakao_channel: string;
   instagram: string;
   instagram_handle: string;
   smartstore_url?: string;
   address: string;
-  business_hours: string;
-  inquiry_lead_time: string;
 }

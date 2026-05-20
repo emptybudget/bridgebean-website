@@ -27,9 +27,10 @@ export function generateMetadata({
 }
 
 const categoryLabel: Record<Coffee["category"], string> = {
-  africa: "아프리카",
-  americas: "중남미",
-  asia: "아시아·태평양",
+  washed: "워시드",
+  natural: "내추럴",
+  experimental: "실험적 가공",
+  rare: "희귀 품종",
 };
 
 export default function CoffeeDetailPage({
@@ -90,10 +91,15 @@ export default function CoffeeDetailPage({
           )}
 
           {coffee.notes.length > 0 && (
-            <div className="mt-6 flex flex-wrap gap-1.5">
-              {coffee.notes.map((n) => (
-                <span key={n} className="tag">{n}</span>
-              ))}
+            <div className="mt-6">
+              <div className="flex flex-wrap gap-1.5">
+                {coffee.notes.map((n) => (
+                  <span key={n} className="tag">{n}</span>
+                ))}
+              </div>
+              {coffee.notes_source && (
+                <p className="mt-2 text-xs text-ink-muted">출처: {coffee.notes_source}</p>
+              )}
             </div>
           )}
 
@@ -113,27 +119,50 @@ export default function CoffeeDetailPage({
             ))}
           </div>
 
-          {/* Pricing */}
-          {(coffee.price_per_kg || coffee.min_order_kg) ? (
-            <div className="mt-8 flex items-end justify-between border-t border-cream-300/60 pt-6">
-              {coffee.price_per_kg ? (
-                <div>
-                  <p className="text-xs text-ink-muted">도매가 (1kg 기준)</p>
-                  <p className="font-serif text-3xl text-ink mt-1">
-                    ₩{coffee.price_per_kg.toLocaleString()}
+          {/* Price tiers */}
+          {coffee.price_tiers && coffee.price_tiers.length > 0 ? (
+            <div className="mt-8 border-t border-cream-300/60 pt-6">
+              <div className="flex items-baseline justify-between mb-3">
+                <p className="label-eyebrow">수량별 단가</p>
+                {coffee.min_order_kg && (
+                  <p className="text-xs text-ink-muted">
+                    최소 주문 {coffee.min_order_kg}kg부터
                   </p>
-                </div>
-              ) : <div />}
-              {coffee.min_order_kg ? (
-                <div className="text-right">
-                  <p className="text-xs text-ink-muted">최소 주문량</p>
-                  <p className="font-serif text-3xl text-ink mt-1">{coffee.min_order_kg}kg</p>
-                </div>
-              ) : null}
+                )}
+              </div>
+              <div className="overflow-hidden rounded-2xl border border-cream-300/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-cream-100 text-ink-muted">
+                    <tr>
+                      <th className="text-left py-2.5 px-4 font-normal">수량</th>
+                      <th className="text-right py-2.5 px-4 font-normal">단가 (1kg)</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-cream-200">
+                    {coffee.price_tiers.map((tier) => (
+                      <tr key={tier.kg} className="bg-cream-50">
+                        <td className="py-3 px-4 text-ink">{tier.kg}kg 이상</td>
+                        <td className="py-3 px-4 text-right text-ink tabular-nums">
+                          {tier.sold_out ? (
+                            <span className="text-ink-muted">품절</span>
+                          ) : tier.price ? (
+                            <span className="font-medium">
+                              ₩{tier.price.toLocaleString()}
+                            </span>
+                          ) : null}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              {coffee.delivery_note && (
+                <p className="mt-3 text-xs text-ink-muted">배송: {coffee.delivery_note}</p>
+              )}
             </div>
           ) : (
             <div className="mt-8 rounded-2xl bg-sage-50 border border-sage-200 p-5 text-sm text-sage-800">
-              가격·재고는 스마트스토어 상품 페이지에서 확인해 주세요.
+              가격·재고는 스마트스토어 상품 페이지 또는 이메일로 문의해 주세요.
             </div>
           )}
 

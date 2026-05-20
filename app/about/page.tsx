@@ -41,23 +41,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="container-content py-16 md:py-24">
-        <p className="label-eyebrow">Values</p>
-        <h2 className="heading-section mt-3 mb-10">우리가 일하는 방식</h2>
-        <div className="grid gap-6 md:grid-cols-3">
-          {company.values.map((v, i) => (
-            <div key={v.title} className="card-surface p-7">
-              <span className="font-serif text-sage-500 text-3xl">
-                0{i + 1}
-              </span>
-              <h3 className="heading-card mt-4">{v.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-ink-soft">{v.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="container-content pb-16">
+      <section className="container-content py-16">
         <div className="card-surface p-8 md:p-10 grid md:grid-cols-2 gap-6">
           <div>
             <p className="label-eyebrow">Founded</p>
