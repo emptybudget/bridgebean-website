@@ -38,6 +38,16 @@ export interface Strength {
   desc: string;
 }
 
+export interface PartnerFarm {
+  name: string;
+  name_kr: string;
+  location: string;
+  slogan_en: string;
+  slogan_meaning: string;
+  description: string;
+  images: string[];
+}
+
 export interface Company {
   name: string;
   name_kr: string;
@@ -48,6 +58,7 @@ export interface Company {
   representative: string;
   strengths: Strength[];
   philosophy: string[];
+  partner_farm?: PartnerFarm;
 }
 
 export interface Contact {

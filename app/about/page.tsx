@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ContactCTA from "@/components/ContactCTA";
 import company from "@/data/company.json";
 
@@ -40,6 +41,61 @@ export default function AboutPage() {
           </ol>
         </div>
       </section>
+
+      {company.partner_farm && (
+        <section className="container-content py-16 md:py-24">
+          <p className="label-eyebrow">Partner Farm</p>
+          <h2 className="heading-section mt-3">
+            우리의 파트너 농장, {company.partner_farm.name}
+          </h2>
+          <p className="mt-2 text-sm text-ink-muted">
+            {company.partner_farm.location}
+          </p>
+
+          <div className="mt-10 rounded-3xl border border-sage-200 bg-sage-50/60 p-8 md:p-12">
+            <p className="font-serif text-xl md:text-2xl text-sage-800 leading-snug">
+              “{company.partner_farm.slogan_en}”
+            </p>
+            <p className="mt-3 text-sm md:text-base text-ink-soft">
+              {company.partner_farm.slogan_meaning}
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-12 md:grid-cols-[1.1fr_1fr] items-start">
+            <div className="body-base space-y-5">
+              {company.partner_farm.description.split("\n\n").map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
+
+            {company.partner_farm.images.length > 0 ? (
+              <div className="grid grid-cols-2 gap-3">
+                {company.partner_farm.images.slice(0, 6).map((src, i) => (
+                  <div
+                    key={src}
+                    className={
+                      "relative aspect-square overflow-hidden rounded-2xl bg-cream-200 border border-cream-300/60 " +
+                      (i === 0 ? "col-span-2 aspect-[4/3]" : "")
+                    }
+                  >
+                    <Image
+                      src={src}
+                      alt={`${company.partner_farm!.name} ${i + 1}`}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 300px"
+                      className="object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="rounded-2xl border border-dashed border-cream-300 bg-cream-100/60 p-8 text-center text-sm text-ink-muted">
+                농장 사진 준비 중입니다.
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       <section className="container-content py-16">
         <div className="card-surface p-8 md:p-10 grid md:grid-cols-2 gap-6">
