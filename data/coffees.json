@@ -9,19 +9,40 @@
     "altitude": "1,500 ~ 1,650m (최대 1,800m)",
     "process": "풀리 워시드 (72시간 발효)",
     "variety": "카티모르",
-    "grade": "Screen 16+",
+    "grade": "Screen 16+ (5~8%는 16+ 미만)",
     "harvest_year": "2025.12 ~ 2026.02",
     "roast_level": "",
-    "notes": ["코코아", "복숭아", "배", "꿀", "사과", "브라운 슈가", "레몬", "라임", "클린"],
-    "notes_source": "농장 큐핑 노트",
+    "notes": [
+      "코코아",
+      "복숭아",
+      "배",
+      "꿀",
+      "사과",
+      "브라운 슈가",
+      "레몬",
+      "라임",
+      "클린"
+    ],
     "description": "불필요한 요소를 걷어내고 밝은 산미와 깔끔한 마무리를 극대화한 워시드의 정석입니다. 72시간 발효를 통해 뮤실리지를 완벽히 제거하여 부드러운 질감을 완성했습니다.",
     "price_per_kg": 25900,
     "min_order_kg": 1,
     "price_tiers": [
-      { "kg": 1,  "price": 25900 },
-      { "kg": 5,  "price": 25400 },
-      { "kg": 10, "price": 24900 },
-      { "kg": 30, "price": 24300 }
+      {
+        "kg": 1,
+        "price": 25900
+      },
+      {
+        "kg": 5,
+        "price": 25400
+      },
+      {
+        "kg": 10,
+        "price": 24900
+      },
+      {
+        "kg": 30,
+        "price": 24300
+      }
     ],
     "image": "/images/locrung-catimor-fully-washed.jpg",
     "gallery": [
@@ -43,19 +64,39 @@
     "altitude": "1,500 ~ 1,650m (최대 1,800m)",
     "process": "카보닉 마세레이션 워시드 (CO₂ 주입 후 72시간 혐기 발효)",
     "variety": "카티모르",
-    "grade": "Screen 16+",
+    "grade": "Screen 16+ (5~8%는 16+ 미만)",
     "harvest_year": "2025.12 ~ 2026.02",
     "roast_level": "",
-    "notes": ["복숭아", "텐저린", "라임", "브라운 슈가", "사과", "배", "Juicy", "묵직한 바디"],
-    "notes_source": "농장 큐핑 노트",
+    "notes": [
+      "복숭아",
+      "텐저린",
+      "라임",
+      "브라운 슈가",
+      "사과",
+      "배",
+      "Juicy",
+      "묵직한 바디"
+    ],
     "description": "이산화탄소 주입 후 스테인리스 탱크에서 72시간 혐기성 발효를 진행했습니다. 토양의 특성을 자연스럽게 살리면서도 둥글고 깊은 질감을 제공합니다.",
     "price_per_kg": 26500,
     "min_order_kg": 1,
     "price_tiers": [
-      { "kg": 1,  "price": 26500 },
-      { "kg": 5,  "price": 26000 },
-      { "kg": 10, "price": 25500 },
-      { "kg": 30, "price": 24900 }
+      {
+        "kg": 1,
+        "price": 26500
+      },
+      {
+        "kg": 5,
+        "price": 26000
+      },
+      {
+        "kg": 10,
+        "price": 25500
+      },
+      {
+        "kg": 30,
+        "price": 24900
+      }
     ],
     "image": "/images/locrung-catimor-cm-washed.jpg",
     "gallery": [
@@ -78,19 +119,38 @@
     "altitude": "1,500 ~ 1,650m (최대 1,800m)",
     "process": "내추럴 (완숙 체리 자연 건조)",
     "variety": "카티모르",
-    "grade": "Screen 16+",
+    "grade": "Screen 16+ (5~8%는 16+ 미만)",
     "harvest_year": "2025.12 ~ 2026.02",
     "roast_level": "",
-    "notes": ["트로피컬 프루트", "파파야", "타마린드", "사과", "밀크 초콜릿", "블랙 피치 티", "펑키"],
-    "notes_source": "농장 큐핑 노트",
+    "notes": [
+      "트로피컬 프루트",
+      "파파야",
+      "타마린드",
+      "사과",
+      "밀크 초콜릿",
+      "블랙 피치 티",
+      "펑키"
+    ],
     "description": "인위적 개입 없이 완숙 체리를 그대로 건조하여 자연의 리듬을 담았습니다. 과도한 발효향 대신 부드럽고 깨끗한 단맛과 편안한 여운을 선사합니다.",
     "price_per_kg": 28400,
     "min_order_kg": 1,
     "price_tiers": [
-      { "kg": 1,  "price": 28400 },
-      { "kg": 5,  "price": 27800 },
-      { "kg": 10, "price": 27400 },
-      { "kg": 30, "price": 26900 }
+      {
+        "kg": 1,
+        "price": 28400
+      },
+      {
+        "kg": 5,
+        "price": 27800
+      },
+      {
+        "kg": 10,
+        "price": 27400
+      },
+      {
+        "kg": 30,
+        "price": 26900
+      }
     ],
     "delivery_note": "약 7일 소요",
     "image": "/images/locrung-catimor-natural.jpg",
@@ -109,21 +169,40 @@
     "origin": "베트남 락즈엉 (달랏 인근)",
     "farm": "LOCRUNG (락즈엉) 농장",
     "altitude": "1,500 ~ 1,650m (최대 1,800m)",
-    "process": "카보닉 마세레이션 내추럴 (240시간 저온 혐기 발효)",
+    "process": "카보닉 마세레이션 내추럴 (240시간 혐기성 발효)",
     "variety": "카티모르",
-    "grade": "Screen 16+",
+    "grade": "Screen 16+ (5~8%는 16+ 미만)",
     "harvest_year": "2025.12 ~ 2026.02",
     "roast_level": "",
-    "notes": ["라임 소다", "망고스틴", "다크 초콜릿", "자몽", "블러드 오렌지", "모히또", "파파야"],
-    "notes_source": "농장 큐핑 노트",
+    "notes": [
+      "라임 소다",
+      "망고스틴",
+      "다크 초콜릿",
+      "자몽",
+      "블러드 오렌지",
+      "모히또",
+      "파파야"
+    ],
     "description": "240시간의 저온 혐기성 발효를 통해 단맛과 부드러운 질감을 극대화했습니다. 깨끗하고 선명한 향이 특징인 LOCRUNG의 야심작입니다.",
     "price_per_kg": 30300,
     "min_order_kg": 1,
     "price_tiers": [
-      { "kg": 1,  "price": 30300 },
-      { "kg": 5,  "price": 29800 },
-      { "kg": 10, "price": 29300 },
-      { "kg": 30, "price": 28800 }
+      {
+        "kg": 1,
+        "price": 30300
+      },
+      {
+        "kg": 5,
+        "price": 29800
+      },
+      {
+        "kg": 10,
+        "price": 29300
+      },
+      {
+        "kg": 30,
+        "price": 28800
+      }
     ],
     "delivery_note": "약 7일 소요",
     "image": "/images/locrung-catimor-cm-natural.jpg",
@@ -146,19 +225,32 @@
     "altitude": "1,500 ~ 1,650m (최대 1,800m)",
     "process": "Ferveo 내추럴 (192시간 수중 혐기 발효)",
     "variety": "카티모르",
-    "grade": "Screen 16+",
+    "grade": "Screen 16+ (5~8%는 16+ 미만)",
     "harvest_year": "2025.12 ~ 2026.02",
     "roast_level": "",
-    "notes": ["트로피컬 프루트", "건과일", "사과", "블랙 티", "펑키한 마무리"],
-    "notes_source": "농장 큐핑 노트",
+    "notes": [
+      "트로피컬 프루트",
+      "건과일",
+      "사과",
+      "블랙 티",
+      "펑키한 마무리"
+    ],
     "description": "192시간 동안 물속에서 혐기 발효(Ferveo)를 진행하여 깊은 생물학적 변화를 이끌어냈습니다. 유럽 시장에서 특히 사랑받는 부드럽고 균형 잡힌 바디감이 일품입니다.",
     "price_per_kg": 29800,
     "min_order_kg": 1,
     "price_tiers": [
-      { "kg": 1,  "price": 29800 },
-      { "kg": 5,  "price": 29300 },
-      { "kg": 10, "price": 28800 },
-      { "kg": 30, "sold_out": true }
+      {
+        "kg": 1,
+        "price": 29800
+      },
+      {
+        "kg": 5,
+        "price": 29300
+      },
+      {
+        "kg": 10,
+        "price": 28800
+      }
     ],
     "delivery_note": "약 7일 소요",
     "image": "/images/locrung-catimor-ferveo-natural.jpg",
@@ -181,18 +273,35 @@
     "altitude": "1,500 ~ 1,650m (최대 1,800m)",
     "process": "Fruit Co-fermentation (디펄핑 → 1단계 혐기 발효 → 과일·효모 투입 후 72시간 추가 발효)",
     "variety": "카티모르",
-    "grade": "Screen 16+",
+    "grade": "Screen 16+ (5~8%는 16+ 미만)",
     "harvest_year": "2025.12 ~ 2026.02",
     "roast_level": "",
-    "notes": ["강렬한 과일 향", "선명한 단맛", "메론", "딸기", "포도", "망고", "복숭아", "리치"],
-    "notes_source": "농장 큐핑 노트",
+    "notes": [
+      "강렬한 과일 향",
+      "선명한 단맛",
+      "메론",
+      "딸기",
+      "포도",
+      "망고",
+      "복숭아",
+      "리치"
+    ],
     "description": "디펄핑 후 1단계 혐기 발효를 거쳐, 실제 과일과 효모를 추가해 72시간 더 발효한 실험적인 커피입니다. 강렬하고 선명한 과일 향을 경험할 수 있습니다.\n\n공급 종류: 메론(재고 있음) · 딸기 · 포도 · 망고 · 복숭아 · 리치",
     "price_per_kg": 44900,
     "min_order_kg": 1,
     "price_tiers": [
-      { "kg": 1, "price": 44900 },
-      { "kg": 2, "price": 44400 },
-      { "kg": 5, "price": 43900 }
+      {
+        "kg": 1,
+        "price": 44900
+      },
+      {
+        "kg": 2,
+        "price": 44400
+      },
+      {
+        "kg": 5,
+        "price": 43900
+      }
     ],
     "delivery_note": "약 7일 소요",
     "image": "/images/locrung-catimor-fruit-cofermentation.jpg",
@@ -212,8 +321,12 @@
     "grade": "",
     "harvest_year": "2026.04 ~ 06 예정",
     "roast_level": "",
-    "notes": ["시럽 같은 바디", "폭발적인 프루티함", "독창적 캐릭터", "풍부한 과일 향"],
-    "notes_source": "농장 큐핑 노트",
+    "notes": [
+      "시럽 같은 바디",
+      "폭발적인 프루티함",
+      "독창적 캐릭터",
+      "풍부한 과일 향"
+    ],
     "description": "베트남 득쫑 지역의 20년 이상 된 고목에서 수확한 희귀 품종입니다. 15일간의 정밀한 CM 가공을 통해 리베리카 특유의 시럽 같은 바디감과 폭발적인 프루티함을 완성했습니다.\n\n가격은 별도 문의 부탁드립니다. 2026년 4~6월 수확 예정 로트로, 사전 예약 가능합니다.",
     "image": "/images/locrung-liberica-excelsa-cm-natural.jpg",
     "gallery": [
